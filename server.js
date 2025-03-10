@@ -6,7 +6,7 @@ const upload = multer({ dest: 'uploads/' })
 const port = 300
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname,"index.html"))
+  res.sendFile(path.join(__dirname,"templates/index.html"))
 })
 
 app.post('/merge', upload.array('pdfs', 2), function (req, res, next) {
